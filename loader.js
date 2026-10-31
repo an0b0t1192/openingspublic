@@ -2,8 +2,8 @@
     const g = (typeof unsafeWindow !== 'undefined') ? unsafeWindow : window;
 
     const OPENINGS = {
-        1: { name: "GBv4",   url: "https://raw.githubusercontent.com/USER/REPO/main/gbv4.js" },
-        2: { name: "VKJJv9", url: "https://raw.githubusercontent.com/USER/REPO/main/vkjjv9.js" }
+        1: { name: "GBv4",   url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/gbv4.js" },
+        2: { name: "VKJJv9", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/vkjjv9.js" }
     };
 
     const loaded = new Set();
