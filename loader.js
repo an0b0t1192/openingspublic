@@ -4,7 +4,9 @@
     
     const OPENINGS = {
         1: { name: "GBv4",   url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/gbv4.js" },
-        2: { name: "VKJJv9", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/vkjjv9.js" }
+        2: { name: "VKJJv9", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/vkjjv9.js" },
+        3: { name: "Thigh Ling v2.1 (Singleplayer/ping 0 ms)", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/tl0.js" },
+        4: { name: "Thigh Ling v2.1 (Multiplayer/ping 389ms)", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/tl7.js" }
     };
     
     const loaded = new Set();
