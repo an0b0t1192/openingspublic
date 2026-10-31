@@ -12,7 +12,7 @@
 
     function menu() {
         console.clear();
-        let text = "Opening Script - By Dr.Web\nAvailable openings:";
+        let text = "ElizziOpenings - By Dr.Web\nAvailable openings:";
         for (const [id, o] of Object.entries(OPENINGS)) {
             text += `\n${id}. ${o.name}`;
         }
