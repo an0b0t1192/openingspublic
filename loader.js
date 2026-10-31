@@ -10,17 +10,12 @@
 
     function menu() {
         console.clear();
-        console.log("------------------------------");
-        console.log("      OPENING SCRIPT");
-        console.log("        BY DR.WEB");
-        console.log("------------------------------");
-        console.log("Available openings:");
+        let text = "Opening Script - By Dr.Web\nAvailable openings:";
         for (const [id, o] of Object.entries(OPENINGS)) {
-            console.log(`  ${id}. ${o.name}`);
+            text += `\n${id}. ${o.name}`;
         }
-        console.log("");
-        console.log("Use set(number) to load");
-        console.log("------------------------------");
+        text += "\nUse set(number) to load";
+        console.log(text);
     }
 
     async function load(id) {
@@ -38,10 +33,7 @@
 
         try {
             const code = await (await fetch(o.url, { cache: "no-store" })).text();
-            
-            // Выполняем скрипт
             new Function('window', 'unsafeWindow', code)(g, g);
-            
             loaded.add(id);
             console.log(`> Setted ${o.name} Opening`);
         } catch (e) {
@@ -49,10 +41,8 @@
         }
     }
 
-    // Глобальные команды
     g.set = id => load(Number(id));
     g.list = menu;
 
-    // Вывод меню при запуске
     menu();
 })();
