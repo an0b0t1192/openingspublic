@@ -10,41 +10,42 @@
 
     function menu() {
         console.clear();
-        // Убрал %c, чтобы на мобилках не было сырого CSS
-        console.log("========================================");
-        console.log("      OPENING SCRIPT - BY DR.WEB        ");
-        console.log("========================================");
+        console.log("------------------------------");
+        console.log("      OPENING SCRIPT");
+        console.log("        BY DR.WEB");
+        console.log("------------------------------");
         console.log("Available openings:");
         for (const [id, o] of Object.entries(OPENINGS)) {
             console.log(`  ${id}. ${o.name}`);
         }
-        console.log("\nUse set(opening number) to load");
-        console.log("Use list() to show menu again\n");
+        console.log("");
+        console.log("Use set(number) to load");
+        console.log("------------------------------");
     }
 
     async function load(id) {
         const o = OPENINGS[id];
         if (!o) {
-            console.log(`[ERROR] Opening #${id} not found.`);
+            console.log(`> ERROR: Opening #${id} not found.`);
             return;
         }
         if (loaded.has(id)) {
-            console.log(`[WARN] ${o.name} is already loaded.`);
+            console.log(`> WARN: ${o.name} is already loaded.`);
             return;
         }
 
-        console.log(`[INFO] Loading ${o.name}...`);
+        console.log(`> Loading ${o.name}...`);
 
         try {
             const code = await (await fetch(o.url, { cache: "no-store" })).text();
             
-            // Выполняем код
+            // Выполняем скрипт
             new Function('window', 'unsafeWindow', code)(g, g);
             
             loaded.add(id);
-            console.log(`[SUCCESS] Setted ${o.name} Opening`);
+            console.log(`> Setted ${o.name} Opening`);
         } catch (e) {
-            console.log(`[ERROR] Failed to load ${o.name}: ${e.message}`);
+            console.log(`> ERROR: Failed to load ${o.name}: ${e.message}`);
         }
     }
 
@@ -52,7 +53,6 @@
     g.set = id => load(Number(id));
     g.list = menu;
 
-    // Показываем меню при запуске
+    // Вывод меню при запуске
     menu();
-    console.log("(loader is active)");
 })();
