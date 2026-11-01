@@ -19,7 +19,7 @@
         2: { name: "VKJJv9", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/vkjjv9.js" },
         3: { name: "VKJJv7", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/vkjjv7.js" },
         4: { name: "VKJJv8", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/vkjjv8.js" },
-        5: { name: "Thigh Ling v2.1 (Singleplayer/ping 0 ms)", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/tl0.js" }
+        5: { name: "Thigh Ling v2.1", url: "https://raw.githubusercontent.com/an0b0t1192/openingspublic/refs/heads/main/tl0.js" }
     };
 
     const MS_PER_MINITICK = 55.6;
